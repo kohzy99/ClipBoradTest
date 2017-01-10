@@ -1,0 +1,96 @@
+Clipboard.GetDataObjectメソッドの戻り値である
+IdataObjectオブジェクトのGetFormatsメソッドで調べた結果
+（string[]で返ってくる）
+
+１．Notepadのテキスト
+
+System.String
+UnicodeText
+Text
+Locale
+OEMText
+
+
+２．WordPadのリッチテキスト
+
+Rich Text Format
+Rich Text Format Without Objects
+RTF As Text
+System.String
+UnicodeText
+Text
+RTF in UTF8
+RTF with NCRs for nonASCII
+Embed Source
+Object Descriptor
+MetaFilePict
+
+３．WordPadのリッチテキスト（図あり）
+
+　上と同じ
+
+４．Wordのテキスト
+
+Object Descriptor
+Rich Text Format
+HTML Format
+System.String
+UnicodeText
+Text
+EnhancedMetafile
+MetaFilePict
+Embed Source
+Link Source
+Link Source Descriptor
+ObjectLink
+
+５．Wordのテキスト（図あり）
+
+　上と同じ
+
+６．ペイントの図
+
+Embed Source
+Object Descriptor
+MetaFilePict
+DeviceIndependentBitmap
+
+７．ブラウザ上のテキスト
+
+System.String
+UnicodeText
+Text
+HTML Format
+msSourceUrl
+
+８．ブラウザ上のテキストおよび図
+
+上と同じ
+
+９．ブラウザ上の図
+
+UntrustedDragDrop
+msSourceUrl
+FileDrop
+FileNameW
+FileName
+UniformResourceLocatorW
+DeviceIndependentBitmap
+HTML Format
+System.String
+UnicodeText
+Text
+
+１０．エクスプローラーのファイル（パス）
+
+Shell IDList Array
+DataObjectAttributes
+DataObjectAttributesRequiringElevation
+FileDrop
+FileNameW
+FileName
+DropDescription
+DropEffectFolderList
+Shell Object Offsets
+Preferred DropEffect
+AsyncFlag
