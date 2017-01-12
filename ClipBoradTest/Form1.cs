@@ -77,5 +77,39 @@ namespace ClipBoradTest
             textBox1.AppendText("DataFormats.WaveAudio = " + DataFormats.WaveAudio + "\r\n");
 
         }
+
+
+        //クリップボード内のデータ形式を確認してから、その形式に応じて処理を分ける
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // クリップボード内のデータをオブジェクト（IDataObject)として取得する
+            IDataObject data = Clipboard.GetDataObject();
+            //
+            if (data.GetDataPresent(DataFormats.Rtf,false))
+            {
+                //RTF形式の場合
+                MessageBox.Show("Rtf形式です");
+                richTextBox1.SelectedRtf = (string)data.GetData(DataFormats.Rtf, false);
+            }
+            else if (data.GetDataPresent(DataFormats.Text,false))
+            {
+                //Text形式の場合
+                MessageBox.Show("Text形式です");
+                richTextBox1.SelectedText = (string)data.GetData(DataFormats.Text, false);
+            }
+            else
+            {
+                //その他の形式の場合
+                MessageBox.Show("その他の形式です");
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+            textBox1.Clear();
+            textBox1.Text =  richTextBox1.SelectedRtf;
+        }
     }
 }
